@@ -15,7 +15,11 @@ Los comandos son cargados a un objeto dentro en lib/CommandHandler.js llamado co
 
 Para añadir un comando
 - Se añade una propiedad al objeto con el nombre del comando
-- A la propiedad se le da el valor de require(<ruta del comando>);
+- A la propiedad se le da el valor de ```require(<ruta del comando>)```
+- Ejemplo:
+  ```
+  spam: require("./commands/spam"),
+  ```
 
 ## Estructura de un comando
 
