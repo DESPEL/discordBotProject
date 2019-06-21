@@ -1,6 +1,8 @@
 {
 	"token": "NTkwMzczMjMzNjI3MjM0MzE0.XQhaSQ.b-kCh3lkj4n3aL2Rz6ttOQLvUrk",
 	"prefix": ";",
-	"botname": "P4-BOT"
-
+	"botname": "P4-BOT",
+	"botColor": "0x42a7f4",
+	"successColor": "0x48f442",
+	"errorColor": "0xFF0000"
 }
