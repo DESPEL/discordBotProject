@@ -4,5 +4,7 @@
 	"botname": "P4-BOT",
 	"botColor": "0x42a7f4",
 	"successColor": "0x48f442",
-	"errorColor": "0xFF0000"
+	"errorColor": "0xFF0000",
+	"errorTitle": "Error",
+	"successTitle": "Operación realizada"
 }
