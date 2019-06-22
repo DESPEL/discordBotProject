@@ -19,7 +19,7 @@ bot.on("ready", () => {
 });
 
 bot.on("message", async message => {
-    commandHandler.handle(message);
+    commandHandler.handle(message, bot);
 });
 
 bot.login(config.token);
