@@ -1,0 +1,20 @@
+{
+  "addons": [
+
+  ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-nodejs"
+    }
+  ],
+  "description": "p4 bot",
+  "env": {
+  },
+  "formation": {
+  },
+  "name": "discordBotProject",
+  "scripts": {
+    "postdeploy": "npm start"
+  },
+  "stack": "heroku-18"
+}
