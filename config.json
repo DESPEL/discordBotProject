@@ -1,5 +1,9 @@
 {
 	"token": "NTkwMzczMjMzNjI3MjM0MzE0.XQhaSQ.b-kCh3lkj4n3aL2Rz6ttOQLvUrk",
+	"youtubeapi": "AIzaSyBUUjQTG2EMbK4Uq2R62Q4YzmEGD9f9Yow",
+	"youtubeapi2": "AIzaSyAYgUGZI9YIfNMEuo3I2Qs2FcgXy8p22_8",
+	"idOAuth": "11164381220-6n6fs86a9os4mmmvlr6b4a3vblnc053p.apps.googleusercontent.com",
+	"secretOAuth": "TLjJvSPa9xOau7WaZU-zLoGy",
 	"prefix": ";",
 	"botname": "P4-BOT",
 	"botColor": "0x42a7f4",
