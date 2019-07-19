@@ -1,0 +1,57 @@
+const Discord = require('discord.js');
+const botName = require('./../../config.json').botname;
+const config = require('./../../config.json');
+let commands = require('../commands');
+
+let noDescriptionSTR = 'No hay descripción del comando';
+
+module.exports.help = function (message) {
+    //console.log(commands);
+    let embed = new Discord.RichEmbed()
+        .setColor('0x42a7f4')
+        .setTitle('Comandos del bot: ' + botName);
+    addCommand(embed, commands);
+    message.channel.send(embed);
+}
+
+function addCommand(embed, commands) {
+    let processedCommands = new Map();
+
+    for (let key in commands) {
+        if (typeof commands[key] == 'function') {
+            console.log(key);
+            console.log(commands[key].description);
+            
+            let cmdobj = {};
+
+            if(!commands[key].description){
+                continue;
+            }
+
+            if (processedCommands.has(commands[key].description)) {
+                processedCommands[commands[key].description] += + ', ' + key;
+                cmdobj.cmd = processedCommands.get(commands[key].description).cmd + ", " + key;
+                cmdobj.args = commands[key].args;
+                processedCommands.set(commands[key].description, cmdobj);
+            } else {
+                cmdobj.cmd = config.prefix + key;
+                cmdobj.args = commands[key].args ? commands[key].args: '';
+                processedCommands.set(commands[key].description, cmdobj);
+            }
+        }
+    }
+
+    processedCommands.forEach((value, key) => {
+        console.log(value);
+        console.log(key);
+
+        let commandSTR = value.cmd + ' ' + value.args;
+        let descriptionSTR = key;
+
+        embed.addField(commandSTR, descriptionSTR);
+    });
+
+}
+
+module.exports.help.description = "Comando que ofrece ayuda sobre el bot."
+module.exports.help.cat = "utils";
