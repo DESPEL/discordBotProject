@@ -14,10 +14,21 @@ bot.on("ready", () => {
     let miembros = 0;
     bot.guilds.map(guild => {
         miembros = miembros + guild.members.size;
+        bot.user.setPresence({
+            status: "online",
+            game: {
+                name: "ser programado",
+                type: "PLAYING"
+            }
+        });
+
     });
     console.log('Miembros: ' + miembros);
 });
 
+bot.on("error", (e) => console.error(e));
+bot.on("warn", (e) => console.warn(e));
+bot.on("debug", (e) => console.info(e));
 bot.on("message", async message => {
     commandHandler.handle(message, bot);
 });
