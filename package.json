@@ -18,7 +18,9 @@
     "youtube-audio-stream": "^0.3.1",
     "ytdl-core": "^0.29.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "decache": "^4.5.1"
+  },
   "scripts": {
     "start": "node index.js"
   },
