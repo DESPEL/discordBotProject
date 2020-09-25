@@ -10,7 +10,7 @@
     "ffmpeg": "0.0.4",
     "glob": "^7.1.4",
     "java": "^0.11.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "jsdom": "^15.1.1",
     "node-opus": "^0.3.2",
     "scrape-youtube": "0.0.4",
